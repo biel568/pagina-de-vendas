@@ -1,0 +1,80 @@
+body{
+    padding-top: 100px;
+
+
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+@keyframes navbar {
+    from{
+        transform: translateY(-10px);
+        opacity: 0.2;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.header{
+    background-color: blue;
+    top: 0%;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    padding: 0px 40px;
+    height: 100px;
+    justify-content: space-between;
+    animation: navbar 1.5s ease-in-out;
+    z-index: 10000;
+
+
+}
+.logo img{
+    height: 65px;
+}
+.menu ul{
+    list-style: none;
+}
+.menu ul li{
+    display: inline-block;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 10px 20px;
+    font-weight: bold;
+    background-color: blue;
+    border-radius: 18px;
+    transition: 1s;
+    display: inline-flex;
+    
+    
+}
+.menu ul li a:hover{
+    color: white;
+    background-color: rgb(0, 0, 218);
+    transform: translateY(5px);
+}
+.quem-somos{
+    align-items: center;
+    display: flex;
+    padding: 60px 40px;
+    gap: 50px;
+    justify-content: center;
+    animation: navbar 1.5s ease-in-out;
+
+}
+
+.quem-somos-txt{
+    background-color: blue;
+    color: white;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 600px;
+    animation: navbar 1.5s ease-in-out;
+}

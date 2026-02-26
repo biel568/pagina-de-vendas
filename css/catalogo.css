@@ -1,0 +1,135 @@
+body{
+    padding-top: 100px;
+
+
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+@keyframes aparecer{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes navbar {
+    from{
+        transform: translateY(-10px);
+        opacity: 0.2;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.header{
+    background-color: blue;
+    top: 0%;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    padding: 0px 40px;
+    height: 100px;
+    justify-content: space-between;
+    animation: navbar 1.5s ease-in-out;
+    z-index: 10000;
+
+
+}
+.logo img{
+    height: 65px;
+}
+.menu ul{
+    list-style: none;
+}
+.menu ul li{
+    display: inline-block;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 10px 20px;
+    font-weight: bold;
+    background-color: blue;
+    border-radius: 18px;
+    transition: 1s;
+    display: inline-flex;
+    
+}
+.menu ul li a:hover{
+    color: white;
+    background-color: rgb(0, 0, 218);
+    transform: translateY(5px);
+}
+
+
+.products{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+    justify-content: center;
+    padding: 60px;
+    gap: 40px;
+}
+.fone-bt,
+.teclado{
+    background-color: rgb(207, 207, 207);
+    border-radius: 20px;
+    text-align: center;
+    color: black;
+    box-shadow: 0 10px 30px black;
+
+    display: flex;
+    flex-direction: column;
+    animation: aparecer 1.5s ease-in-out;
+
+    overflow: hidden;
+}
+.desc-fone,
+.desc-teclado{
+    flex-grow: 1;
+}
+.desc-fone,
+.desc-teclado,
+.detaly-fone,
+.detaly-teclado{
+    padding: 20px;
+}
+.buy-fone,
+.buy-teclado{
+    background-color: #111;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    transition: 0.3s;
+    display: inline-block;
+    
+    
+}
+
+
+
+.buy-fone:hover,
+.buy-teclado:hover{
+    background-color: blue;
+    transform: translateY(-3px);
+}
+.detaly-fone,
+.detaly-teclado{
+    margin-top: auto;
+    padding: 20px;
+}
+
+.products img{
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    
+    box-shadow: 0 3px 3px black;
+}

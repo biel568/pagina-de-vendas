@@ -1,0 +1,135 @@
+body{
+    padding-top: 100px;
+
+
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+@keyframes navbar {
+    from{
+        transform: translateY(-10px);
+        opacity: 0.2;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.header{
+    background-color: blue;
+    top: 0%;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    padding: 0px 40px;
+    height: 100px;
+    justify-content: space-between;
+    animation: navbar 1.5s ease-in-out;
+    z-index: 10000;
+
+
+}
+.logo img{
+    height: 65px;
+}
+.menu ul{
+    list-style: none;
+}
+.menu ul li{
+    display: inline-block;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 10px 20px;
+    font-weight: bold;
+    background-color: blue;
+    border-radius: 18px;
+    transition: 1s;
+    display: inline-flex;
+    
+}
+.menu ul li a:hover{
+    color: white;
+    background-color: rgb(0, 0, 218);
+    transform: translateY(5px);
+}
+
+
+@keyframes spawn{
+    from{
+        transform: scale(0.9);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+.product{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    animation: spawn 1s ease-in-out;
+
+}
+.product img{
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0px 1px 1px black;
+    transition: 0.4s;
+}
+
+.product img:hover{
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.buy{
+    margin-top: 50px;
+}
+
+.buy a{
+    display: inline-block;
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    padding: 12px 35px;
+    border-radius: 18px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.5s;
+}
+
+.buy a:hover{
+    background-color: rgb(0, 0, 200);
+    transform: scale(1.05);
+}
+
+@media (max-width: 900px){
+    .product{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .product img{
+        height: 300px;
+    }
+
+    .buy{
+        margin-top: 30px;
+    }
+}
